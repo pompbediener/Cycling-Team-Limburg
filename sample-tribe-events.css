@@ -1,0 +1,140 @@
+/**
+ * Sample CSS customizations for The Events Calendar and related plugins.
+ *
+ * Contents:  1. Tribe Bar Customizations
+ *            2. General Customizations for All Views
+ *            3. Month View Customizations
+ *            4. List View Customizations
+ *            5. Single Event Page Customizations
+ *
+ * Usage:  This file can be used "as is" - simply save it as "tribe-events.css" within
+ *         your theme's "tribe-events" directory, ie:
+ *
+ *         wp-content/themes/YOUR_THEME/tribe-events/tribe-events.css
+ *
+ *         However, it is not expected that you will leave it untouched. Instead, use
+ *         this as a vehicle to learn about styling The Events Calendar: experiment, modify
+ *         and improve to your heart's content!
+ *
+ *
+ * Last revised:   30 March 2015
+ * Target version: 3.9.1 (The Events Calendar)
+ */
+
+
+/**
+ * 1. TRIBE BAR CUSTOMIZATIONS
+ * ---------------------------
+ * These tweaks relate to the Tribe Bar, which is the default filter/search
+ * bar provided by The Events Calendar itself.
+ */
+
+/** Add a border to the Tribe Bar */
+#tribe-events-bar {
+	border: 1px solid black;
+}
+
+/** Change the background colour of the Tribe Bar, view selector, etc */
+#tribe-events-bar,
+#tribe-bar-form,
+.tribe-bar-views-inner,
+#tribe-bar-views .tribe-bar-views-list .tribe-bar-views-option a,
+#tribe-bar-form #tribe-bar-views .tribe-bar-views-list:hover .tribe-bar-views-option a {
+	background: yellow;
+}
+
+/** Style the "Find Events" button to give it rounded corners and a new colour scheme */
+#tribe-bar-form .tribe-bar-submit input[type="submit"] {
+	background: lightyellow;
+	border: 2px solid black;
+	border-radius: 26px;
+	color: black;
+}
+
+/** Invert the "Find Events" button colours when a vistor hovers over it */
+#tribe-bar-form .tribe-bar-submit input[type="submit"]:hover {
+	background: black;
+	color: white;
+}
+
+/** Restyle the form fields to look more like regular inputs */
+#tribe-bar-form input[type="text"] {
+	background: lightyellow;
+	border: 1px solid black;
+	padding: 5px;
+}
+
+/**
+ * 2. GENERAL CUSTOMIZATIONS FOR ALL VIEWS
+ * ---------------------------------------
+ */
+
+/** Make the page main title appear in uppercase */
+#tribe-events-content h2.tribe-events-page-title,
+#tribe-events-content h2.tribe-events-single-event-title {
+	text-transform: uppercase;
+}
+
+/** Make pagination links visible at the top of event archive views (not just in the footer area) */
+#tribe-events-header .tribe-events-sub-nav li,
+#tribe-events-header .tribe-events-sub-nav .tribe-events-nav-next a {
+	display: inline-block;
+}
+
+/**
+ * 3. MONTH VIEW CUSTOMIZATIONS
+ * ----------------------------
+ */
+
+/** Highlight events in month/grid view belonging to a specific category
+    (in this case a hypothetical category with a slug of "test-category") */
+#tribe-events-content .tribe-events-calendar .tribe-events-category-test-category h3 a {
+	color: red;
+	text-decoration: underline;
+}
+
+/** Hide any events included from the previous/next month */
+#tribe-events-content .tribe-events-calendar td.tribe-events-othermonth > div {
+	display: none;
+}
+
+/** Highlight calendar cells for the first day of the week */
+.tribe-events-calendar tr td:first-child {
+	background: orange;
+}
+
+/**
+ * 4. LIST VIEW CUSTOMIZATIONS
+ * ---------------------------
+ */
+
+/** Hide the month seperators/headers */
+.tribe-events-list-separator-month {
+	display: none;
+}
+
+/**
+ * 5. SINGLE EVENT PAGE CUSTOMIZATIONS
+ * -----------------------------------
+ */
+
+/** Remove default grey-shading and border around single event meta areas */
+.single-tribe_events .tribe-events-event-meta {
+	background: transparent;
+	border: none;
+}
+
+/** Remove the padding from the left side of meta blocks within the single event meta areas */
+.tribe-events-event-meta .tribe-events-meta-group {
+	padding-left: 0;
+}
+
+/** Differentiate the Google Calendar export button */
+.tribe-events-button, #tribe-events .tribe-events-button.tribe-events-gcal {
+	background: #803060;
+}
+
+/** Differentiate the iCal export button */
+.tribe-events-button, #tribe-events .tribe-events-button.tribe-events-ical {
+	background: #907010;
+}
